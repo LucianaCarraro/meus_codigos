@@ -1,0 +1,31 @@
+<canvas width="600" height="400"> <canvas>
+
+<script> 
+//Bandeira da Grécia
+
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+	
+	function fazBarraAzul(x, y) {
+		
+		pincel.fillStyle = 'blue';
+		pincel.fillRect(x, y, 600, 45);
+	}
+
+	//5 linhas da bandeira
+	for(i = 0; i <= 405; i = i + 90) {
+		
+		fazBarraAzul(0, i);
+	}
+	//Quadrado atrás da "cruz"
+	pincel.fillStyle = 'blue';
+	pincel.fillRect(0, 0, 250, 225);
+	
+	//"cruz"
+	pincel.fillStyle = 'white';
+	pincel.fillRect(100, 0, 45, 225);
+	
+	pincel.fillRect(0, 90, 250, 45);
+	
+
+</script>
